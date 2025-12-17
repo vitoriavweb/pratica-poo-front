@@ -7,15 +7,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+ 
+    <script>
+    if (!localStorage.getItem("verificado")) {
+        let resposta = confirm("OOOOIII :D, Você é um robô?");
 
-    <h1>To-do com Flask</h1>
-    <form method="post" action="{{ url_for('add_task') }}">
-        <input type="text" name="title" placeholder="Digite uma tarefa">
-        <button type="submit">Adicionar</button>
-    </form>
+        if (!resposta) {
+            localStorage.setItem("verificado", "true");
+        } else {
+            alert("SAIA DAQUI >:(");
+        }
+    }
+</script>
+
+
+    <div>
+
+        <h1>Lista de tarefas</h1>
+        <hr>
+        <form method="post" action="{{ url_for('add_task') }}">
+            <input type="text" name="title" placeholder="Digite uma tarefa">
+            <button type="submit">Adicionar</button>
+        </form>
 
     <hr>
-
+    </div class="nome">
     {% if tasks|length == 0 %}
         <p>Nenhuma tarefa cadastrada.</p>
     {% else %}
