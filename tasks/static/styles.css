@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #1e3a8a;
+    color: #f1f5f9;         
+}
+
+h1 {
+    color: #e0f2fe;        
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 6px 10px;
+    background-color: #3b82f6; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    color: #000000;      
+    padding: 6px;
+}
